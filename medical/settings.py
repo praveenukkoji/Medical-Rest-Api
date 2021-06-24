@@ -89,13 +89,13 @@ WSGI_APPLICATION = 'medical.wsgi.application'
 # database settings
 DATABASES = {
     'default': {
-        'ENGINE': '',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': '',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
-        'PORT': '',
-        'SCHEMA': ''
+        'PORT': '5432',
+        'SCHEMA': 'public'
     }
 }
 

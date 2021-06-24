@@ -242,6 +242,8 @@ class LoginView(GenericAPIView):
                 return response
             if user:
                 token_generation_payload = {
+                    "user_id": user.user_id,
+                    'role_id': user.role_id.role_id,
                     "user_email": user_email,
                     "user_password": user_password,
                     "exp": datetime.utcnow() + timedelta(minutes=60),
